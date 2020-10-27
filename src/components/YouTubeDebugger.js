@@ -20,13 +20,10 @@ constructor(){
 
 handleClickBitrate=()=>{
    this.setState({
-             errors:[],
-        user: null,
-        settings:{
-            bitrate: 12,
-            video:{
-                resolution: '1080p'
-            }
+      settings:{
+        ...this.state.settings,
+            bitrate: 12
+
         }
    })  
 
@@ -36,11 +33,10 @@ handleClickBitrate=()=>{
 
 handleClickResolution=()=>{
    this.setState( {
-        errors:[],
-        user: null,
+
         settings:{
-            bitrate: 8,
-            video:{
+            ...this.state.settings,
+            video: {
                 resolution: '720p'
             }
         }
